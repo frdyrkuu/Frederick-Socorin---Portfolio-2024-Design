@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Fonts */
+  @font-face {
+    font-family: "Maragasa";
+    src: local("Maragasa"), url("../dist/Maragasa.otf") format("opentype");
+  }
+
+  body {
+    @apply h-[100svh];
+  }
+  h1 {
+    @apply text-[#f3f3f3];
+    font-family: "Maragasa", sans-serif;
+    @apply tracking-[.15em];
+    @apply text-[2rem];
+    @apply sm:text-[4rem];
+    @apply font-[600];
+  }
+  h2 {
+    font-family: "Maragasa", sans-serif;
+    @apply tracking-[.10em];
+    @apply text-[2rem];
+    @apply text-[#f3f3f3];
+    @apply font-[600];
+    @apply sm:text-[4rem];
+  }
+  h3 {
+    @apply text-lg;
+  }
+  p {
+    @apply text-[18px];
+    @apply text-[#f3f3f3];
+  }
+  section {
+    @apply max-w-7xl;
+    @apply mx-auto;
+  }
+  span{
+    @apply text-[14px];
+    @apply text-[#252525];
+    @apply font-[500];
+  }
+}

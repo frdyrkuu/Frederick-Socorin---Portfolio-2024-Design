@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"
+  class="scrollbar scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thumb-[#252525] scrollbar-track-[#F3F3F3] h-32 overflow-y-scroll scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fred - Web Developer</title>
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="./src/output.css" />
+  <link rel="stylesheet" href="./src/includes/swiper.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body class="antialiased font-['Montserrat'] bg-[#F3F3F3]">
+  <main class="relative mx-auto sm:p-4 p-6" style="background-image: url(./dist/images/bg.png);">
+    <div class="absolute inset-0 bg-black opacity-90"></div> <!-- Dark overlay -->
+    <!-- Landing Page -->
+    <section class="max-w-7xl relative z-10"> <!-- Added relative and z-10 to bring content above overlay -->
+      <div class="flex items-center min-h-screen">
+        <div class="grid gap-4">
+          <h1 class="" data-aos="fade-in">
+            My name is Frederick
+          </h1>
+          <p class="max-w-[440px] font-[400]" data-aos="fade-right">
+            Your Go-To Web Development Specialist From The Philippines, Turning Your Vision into
+            Stunning Websites
+          </p>
+
+          <div data-aos="fade-up">
+            <a href=""><button
+                class="mt-5 border text-[#f3f3f3] border-[#f3f3f3] px-6 py-3 hover:text-white hover:bg-[#000000] transition duration-700">
+                Get in Touch
+              </button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="flex items-center justify-center sm:mt-[-200px] mt-[-140px] animate-bounce">
+        <div data-aos="fade-in">
+          <a href="#featured"><img src="./dist/icon/right-arrow-svgrepo-com.svg" alt="" class="rotate-90" /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="h-[100svh] sm:mt-40 mt-20" id="featured">
+      <div class="">
+        <div data-aos="fade-right" class="pb-4">
+          <h2>Featured Works</h2>
+        </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper" id="swiper-container">
+            <!-- The swiper slides will be loaded here -->
+          </div>
+          <div class="pagination-container">
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/swiper.js"></script>
+  <script src="./js/templates.js"></script>
+
+</body>
+
+</html>
