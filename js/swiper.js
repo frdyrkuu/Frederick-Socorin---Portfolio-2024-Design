@@ -1,14 +1,11 @@
 var swiper = new Swiper(".mySwiper", {
   grabCursor: true,
-
   crossFade: true,
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 20,
   loop: true,
   speed: 2000,
-  freeMode: true,
-  autoplay: true,
 
   autoplay: {
     delay: 2000,
