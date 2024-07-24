@@ -8,17 +8,17 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
   speed: 2000,
   freeMode: true,
- 
+  autoplay: true,
+
   autoplay: {
     delay: 2000,
-    disableOnInteraction: false,
+    // disableOnInteraction: false,
   },
 
   breakpoints: {
     640: {
       slidesPerView: 1,
       spaceBetween: 20,
-     
     },
     768: {
       slidesPerView: 2,
@@ -27,7 +27,6 @@ var swiper = new Swiper(".mySwiper", {
     1024: {
       slidesPerView: 3,
       spaceBetween: 30,
-      
     },
   },
 
