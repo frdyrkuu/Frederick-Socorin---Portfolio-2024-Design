@@ -2,7 +2,6 @@ var swiper = new Swiper(".mySwiper", {
   grabCursor: true,
   crossFade: true,
   slidesPerView: 1,
-  slidesPerGroup: 1,
   spaceBetween: 20,
   loop: true,
   speed: 2000,
