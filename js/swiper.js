@@ -1,11 +1,9 @@
 var swiper = new Swiper(".mySwiper", {
   grabCursor: true,
-  crossFade: true,
   slidesPerView: 1,
+  slidesPerGroup: 1,
   spaceBetween: 20,
-  loop: true,
   speed: 2000,
-
   autoplay: {
     delay: 2000,
     // disableOnInteraction: false,
@@ -30,11 +28,4 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     dynamicBullets: true,
   },
-});
-
-// Prevent default action on image click
-document.querySelectorAll(".swiper-slide img").forEach((img) => {
-  img.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
 });
