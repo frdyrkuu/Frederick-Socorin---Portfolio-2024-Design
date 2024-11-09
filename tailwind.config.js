@@ -1,12 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}", "*.html", "./templates/*.html"],
+  content: ["*.{html,js}"],
   theme: {
-    extend: {
-      fontFamily: {
-        Maragasa: ["Maragasa", "sans-serif"],
-      },
-    },
+    extend: {},
   },
-  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
+  plugins: [],
 };
