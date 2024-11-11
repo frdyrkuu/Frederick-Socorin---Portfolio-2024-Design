@@ -1,0 +1,32 @@
+# Instruction: This is a Git Pipeline YAML where the git will FTP the commits from the main branch to the Server (StackCP).
+# Step 1: Uncomment the line 28.
+# Step 2: Make sure to follow the right 📂 path of your site on the staging fluiddev 🌐 public_html.
+# Step 3: Add this .yml file to your root folder project.
+
+# Notes 📓:
+# 🎨 Deploying WordPress theme to: ./ /{name-of-site}/wp-content/themes/{theme-folder-name}
+# name-of-site refering to the public_html folder of your project site.
+
+# Make sure to remove those curly braces 😊
+
+# ✏️ Explanation
+# There is one stage on this pipeline. 🚀 DEPLOY
+
+# 🚀 DEPLOY: Executes the file transfer protocol process.
+
+stages:
+  - deploy
+
+deploy_to_stackcp 🚀:
+  stage: deploy
+  script:
+    - apt-get update && apt-get install -y lftp
+    - echo 🌐 Connecting to FTP host "$FTP_HOST"
+    - echo 📁 Listing current directory contents
+    - ls -la
+    - echo "🚀 Uploading files to theme folder directory on the FTP server..."
+    - lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_HOST" -e "set ftp:ssl-allow no; mkdir -p "$FTP_FILEPATH"; mirror -R --delete --exclude twig_cache ./ "$FTP_FILEPATH"; bye"
+
+    - echo ✅ File upload complete!
+  only:
+    - main
